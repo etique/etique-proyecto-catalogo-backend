@@ -1,0 +1,191 @@
+Juan Carlos Perez Castillo
+18:25
+sudo lsof -i :3000
+kill -9 PID
+jackeline gallego
+18:32
+Natilladancd l boot 🤭🤭🤭
+Juan Carlos Perez Castillo
+19:01
+class="d-flex gap-4"
+edwin calistenia
+19:11
+compañero Andres le di un padding 10px
+y se organizo mejor
+Juan Carlos Perez Castillo
+19:14
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+Juan Carlos Perez Castillo
+19:21
+const api = axios.create({
+    baseURL: 'http://localhost:3000',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+})
+
+
+module.exports = {
+    api,
+}
+Juan Carlos Perez Castillo
+19:29
+import { api } from "./utils.js";
+edwin calistenia
+19:42
+.catch((error) => alert("Error!: " + err?.response?.dat?.message));
+  });
+});
+Juan Carlos Perez Castillo
+19:42
+err?.response?.data?.message
+.catch((err) => alert("Error!: " + err?.response?.data?.message));
+Andres Fagua
+19:56
+d-flex gap-4
+Juan Carlos Perez Castillo
+20:03
+class="d-flex gap-4"
+edwin calistenia
+20:08
+<div class="d-flex gap-4">
+      <form>
+        <div class="mb-3">
+          <label for="documento" class="form-label">Documento</label>
+          <input
+            type="text"
+            class="form-control"
+            id="documento"
+            placeholder="99999999"
+            name="documento"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="Nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class
+no lo pasa completo
+Andres Fagua
+20:14
+gracias
+Juan Carlos Perez Castillo
+20:40
+function cargarDatosCliente() {
+  const tbody = document.querySelector("tbody");
+  tbody.innerHTML = "";
+  // peticion a localhost:3000/clientes del server de node
+  api.get("/clientes").then(({ data }) => {
+    
+    for (const cliente of data) {
+      tbody.innerHTML += `
+          <tr>
+            <td>${cliente.id}</td>
+            <td>${cliente.documento}</td>
+            <td>${cliente.nombre}</td>
+            <td>${cliente.apellidos}</td>
+            <td>${cliente.email}</td>
+          </tr>
+}
+  });
+}
+Juan Carlos Perez Castillo
+21:23
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+Juan Carlos Perez Castillo
+21:42
+<div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary">Left</button>
+                    <button type="button" class="btn btn-primary">Middle</button>
+                </div>
+Juan Carlos Perez Castillo
+21:43
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+Juan Carlos Perez Castillo
+21:54
+https://fontawesome.com/
+Juan Carlos Perez Castillo
+21:58
+<div class="btn-group" role="group" aria-label="actions">
+                    <button type="button" class="btn btn-primary">
+                       <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+Andres Fagua
+22:01
+https://color.adobe.com/create/color-wheel
+Juan Carlos Perez Castillo
+22:01
+https://color.adobe.com/es/create/color-wheel
+https://lucide.dev/icons
+Andres Fagua
+22:02
+https://flatuicolors.com/  ....
+Edwin Rodriguez
+22:08
+Puede ser tan amable de compartir el link del repositorio
+de Git
+ath-avxc-nrm
+*
+FRONTEND:
+https://github.com/juanperezunilibre/frontend
+
+BACKEND:
+https://github.com/juanperezunilibre/backend-node
+*
+Juan Carlos Perez Castillo - F.121224
+21:07
+FRONTEND:
+https://github.com/juanperezunilibre/frontend
+
+BACKEND:
+*
+tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+Juan Carlos Perez Castillo
+21:40
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+*
+Juan Carlos Perez Castillo
+19:08
+https://drive.google.com/drive/folders/1XMPBlzUA1pBfKrQDqpyaPF8UK2eWngtJ
+keep
+Fijado
+FRONTEND:
+https://github.com/juanperezunilibre/frontend
+
+BACKEND:
+https://github.com/juanperezunilibre/backend-node
+keep
+Fijado
+Juan Carlos Perez Castillo
+20:41
+lsof -i :3000
+kill -9 PID
+Juan Carlos Perez Castillo
+21:07
+FRONTEND:
+https://github.com/juanperezunilibre/frontend
+
+BACKEND:
+https://github.com/juanperezunilibre/backend-node
+Juan Carlos Perez Castillo
+21:14
+tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+Juan Carlos Perez Castillo
+21:40
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+Juan Carlos Perez Castillo
+21:55
+FRONTEND:
+https://github.com/juanperezunilibre/frontend
+
+BACKEND:
+https://github.com/juanperezunilibre/backend-node
+ath-avxc-nrm
+https://github.com/juanperezunilibre/backend-node
+*
+

@@ -1,0 +1,152 @@
+Juan Carlos Perez Castillo
+18:56
+FRONTEND:
+https://github.com/juanperezunilibre/frontend
+
+BACKEND:
+https://github.com/juanperezunilibre/backend-node
+keep
+Fijado
+Juan Carlos Perez Castillo
+19:18
+Un momento
+Ya vuelvo
+Juan Carlos Perez Castillo
+19:24
+`
+Juan Carlos Perez Castillo
+19:26
+api({
+      method: editar.value ? "PUT" : "POST",
+      url: editar.value ? `/cliente/${editar.value}` : "/cliente",
+      data,
+    })
+Juan Carlos Perez Castillo
+19:34
+await schema.validate(data) // validamos que el objeto cumpla con el esquema
+Juan Carlos Perez Castillo
+20:07
+const data = request.body
+  const { id } = request.params
+
+  //const query = "UPDATE clientes SET ? WHERE id = ?"
+  const query = "UPDATE clientes SET documento = ?, nombre = ?, apellidos = ?, email = ?, fecha_nacimiento = ? WHERE id = ?"
+
+  connection.execute(query, Object.values(data).concat(id), function(error, result){
+    if (error) {
+      response.status(400).json({
+        message: "Error al actualizar el cliente",
+        error
+ })
+    } else {
+      response.json({
+ente actualizado",
+        data: result
+      })
+    }
+  })
+
+})
+Juan Carlos Perez Castillo
+20:10
+response.status(400).json({
+      message: error.message,
+    })
+Juan Carlos Perez Castillo
+20:11
+api({
+      method: editar.value ? "PUT" : "POST",
+      url: editar.value ? `/cliente/${editar.value}` : "/cliente",
+      data,
+    })
+Andres Fagua
+20:17
+danger
+Juan Carlos Perez Castillo
+21:05
+router.delete("/cliente/:id", function (request, response){
+  const {id} = request.params
+
+  const query = "DELETE FROM clientes WHERE id = ?"
+
+  connection.execute(query, [id], function(error, result){
+    if (error) {
+      response.status(400).json({
+        message: "Error al eliminar el cliente",
+        error
+      })
+    } else {
+      response.json({
+        message: "Cliente eliminado correctamente",
+        data: result
+      })
+    }
+  })
+})
+Juan Carlos Perez Castillo
+21:13
+window.eliminarCliente = function(id) {
+    console.log("Eliminar cliente con id: ", id)
+}
+onclick="eliminarCliente(${cliente.id})"
+Andres Fagua
+21:29
+function cargarDatosCliente() {
+    const tbody = document.querySelector("tbody");
+    tbody.innerHTML = "";
+    // peticion a localhost:3000/clientes del server de node
+    api.get("/clientes").then(({ data }) => {
+      
+      for (const cliente of data) {
+
+        const dateConverted = dayjs(cliente.fecha_nacimiento).format("DD-MM-YYYY")
+
+        tbody.innerHTML += `
+            <tr>
+              <td>${cliente.id}</td>
+              <td>${cliente.documento}</td>
+              <td>${cliente.n
+<td>${cliente.nombre}</td>
+              <td>${cliente.apellidos}</td>
+              <td>${cliente.email}</td>
+              <td>${dateConverted}</td>
+              <td>
+                <div class="btn-group" role="group" aria-label="actions">
+                    <button type="button" class="btn btn-primary"
+                    onClick="editarCliente(${cliente.id})">
+                       <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button type="b
+Juan Carlos Perez Castillo
+21:32
+window.eliminarCliente = function (id) {
+  Swal.fire({
+    title: "Estas seguro?",
+    text: "No podras revertir esto!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, borrar!",
+    cancelButtonText: "Cancelar",
+  }).then(function (result) {
+    if (result.isConfirmed) {
+      fetch(`http://localhost:3000/cliente/${id}`, {
+        method: "DELETE",
+      })
+        .then((response) => response.json())
+then((data) => {
+          Swal.fire("Eliminado!", data.message, "success");
+          cargarDatosCliente();
+        });
+    }
+  });
+};
+Juan Carlos Perez Castillo
+22:09
+FRONTEND:
+https://github.com/juanperezunilibre/frontend
+
+BACKEND:
+https://github.com/juanperezunilibre/backend-node
+ath-avxc-nrm
